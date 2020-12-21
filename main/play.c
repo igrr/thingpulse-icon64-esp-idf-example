@@ -22,7 +22,7 @@ static void init_i2s(int sample_rate)
         .dma_buf_len = 1024,
         .use_apll = false,
         .tx_desc_auto_clear = true,
-        .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1
+        .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1 | ESP_INTR_FLAG_IRAM
     };
 
     ESP_ERROR_CHECK(i2s_driver_install(I2S_NUM, &i2s_config, 0, NULL));

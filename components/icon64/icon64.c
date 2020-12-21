@@ -3,7 +3,7 @@
  *
  * This code is in public domain, or, at your option, CC0-licensed.
  */
-#include <stdio.h>
+
 #include "icon64.h"
 #include "driver/gpio.h"
 #include "driver/i2s.h"
@@ -44,7 +44,7 @@ esp_err_t icon64_leds_init(void)
     if (err != ESP_OK) {
         return err;
     }
-    err = rmt_driver_install(config.channel, 0, 0);
+    err = rmt_driver_install(config.channel, 0, ESP_INTR_FLAG_LEVEL2 | ESP_INTR_FLAG_IRAM);
     if (err != ESP_OK) {
         return err;
     }
@@ -59,7 +59,6 @@ esp_err_t icon64_leds_init(void)
 
 esp_err_t icon64_leds_set_all(rgb_t color)
 {
-    printf("color %d %d %d\n", color.r, color.g, color.b);
     if (s_led_strip == NULL) {
         return ESP_ERR_INVALID_STATE;
     }
