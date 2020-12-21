@@ -26,12 +26,12 @@ Files from [data](data/) directory are automatically uploaded to an SPIFFS parti
 
 To build and flash the app only (which is faster), run instead:
 ```
-idf.py -PORT app-flash monitor
+idf.py -p PORT app-flash monitor
 ```
 
 ### Credits
 
-Thanks to @squix78 for sending me an Icon64 board!
+Thanks to [@squix78](https://github.com/squix78) for sending me an Icon64 board!
 
 [WAV](components/wav) library from https://github.com/brglng/libwav/ is licensed under MPL license. You might consider using something else if you are building a commercial project.
 
