@@ -35,4 +35,6 @@ Thanks to @squix78 for sending me an Icon64 board!
 
 [WAV](components/wav) library from https://github.com/brglng/libwav/ is licensed under MPL license. You might consider using something else if you are building a commercial project.
 
+WAV files in [data](data/) directory are from [AOSP project](https://android.googlesource.com/platform/frameworks/base/+/android-6.0.1_r68/data/sounds/alarms/wav/), which is Apache 2.0 licensed.
+
 The rest of the code is based on ESP-IDF examples. It is released into public domain or CC0-licensed, at your option.
